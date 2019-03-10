@@ -7,12 +7,13 @@
     <DebugType>embedded</DebugType>
     <DebugSymbols>True</DebugSymbols>	
     <DebugSymbols>True</DebugSymbols>	
-    <PackageVersion>1.0.0</PackageVersion>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-	<PackageLicenseFile>license.txt</PackageLicenseFile>	
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>	
+	  <PackageLicenseFile>license.txt</PackageLicenseFile>	
+    <Authors>MoonStorm</Authors>	
+    <Company />	
+    <Description>ZWave protocol library written fully in .NET Standard</Description>	
   </PropertyGroup>
   <ItemGroup>
-    <None Include="license.txt" Pack="true" PackagePath="$(PackageLicenseFile)"/>
+    <None Include="license.txt" Pack="true" PackagePath="" />
   </ItemGroup>
 </Project>
