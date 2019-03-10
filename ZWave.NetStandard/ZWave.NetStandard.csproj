@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <EnableDocumentationFile>true</EnableDocumentationFile>
+	<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>							
+    <DocumentationFile>bin\$(Configuration)\$(AssemblyName).xml</DocumentationFile>
+    <DebugType>embedded</DebugType>
+    <DebugSymbols>True</DebugSymbols>	
+    <DebugSymbols>True</DebugSymbols>	
+    <PackageVersion>1.0.0</PackageVersion>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+	<PackageLicenseFile>license.txt</PackageLicenseFile>	
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>	
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="license.txt" Pack="true" PackagePath="$(PackageLicenseFile)"/>
+  </ItemGroup>
+</Project>
