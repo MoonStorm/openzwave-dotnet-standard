@@ -9,10 +9,13 @@
     <DebugSymbols>True</DebugSymbols>	
     <PackageVersion>1.0.0</PackageVersion>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-	<PackageLicenseFile>license.txt</PackageLicenseFile>	
+	  <PackageLicenseFile>license.txt</PackageLicenseFile>	
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>	
+    <Authors>MoonStorm</Authors>	
+    <Company />	
+    <Description>ZWave protocol library written fully in .NET Standard</Description>	
   </PropertyGroup>
   <ItemGroup>
-    <None Include="license.txt" Pack="true" PackagePath="$(PackageLicenseFile)"/>
+    <None Include="license.txt" Pack="true" PackagePath="" />
   </ItemGroup>
 </Project>
