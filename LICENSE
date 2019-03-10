@@ -166,7 +166,7 @@ Library.
 
   7. Open ZWave
 
-  This Library directly utilizes the configuration subsystem of the 
+  This Library directly utilizes the manufacturer database distributed by the
 Open ZWave project, located at https://github.com/OpenZWave/open-zwave.
-A copy of the license under which Open ZWave is distributed can be found
-inside the document LICENSE-ZWAVE.
+Please refer to the document LICENSE-OpenZWave for details regarding the license terms
+surrounding the OpenZWave distribution.
