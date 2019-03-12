@@ -1,3 +1,3 @@
 [submodule "OpenZWave"]
 	path = OpenZWave
-	url = git@github.com:MoonStorm/open-zwave.git
+	url = https://github.com/MoonStorm/open-zwave.git
