@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace ZWave.NetStandard.Tests
+namespace OpenZWave.NetStandard.Tests
 {
     using TechTalk.SpecFlow;
     
