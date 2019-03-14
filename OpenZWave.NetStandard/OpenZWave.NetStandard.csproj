@@ -6,14 +6,16 @@
     <DocumentationFile>bin\$(Configuration)\$(AssemblyName).xml</DocumentationFile>
     <DebugType>embedded</DebugType>
     <DebugSymbols>True</DebugSymbols>	
-    <DebugSymbols>True</DebugSymbols>	
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-	  <PackageLicenseFile>license.txt</PackageLicenseFile>	
+	<PackageLicenseFile>license.txt</PackageLicenseFile>	
     <Authors>MoonStorm</Authors>	
     <Company />	
     <Description>ZWave protocol library written fully in .NET Standard</Description>	
   </PropertyGroup>
   <ItemGroup>
     <None Include="license.txt" Pack="true" PackagePath="" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="JetBrains.Annotations" Version="2018.3.0" />
   </ItemGroup>
 </Project>
