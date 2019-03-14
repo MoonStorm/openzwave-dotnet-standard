@@ -9,6 +9,6 @@ You are free to utilize this library in any type of software as long as you abid
 
 ## Current Status
 [![Build Status](https://moonstorm.visualstudio.com/OpenZWave-DotNet-Standard/_apis/build/status/OpenZWave-DotNet-Standard-ASP.NET%20Core-CI?branchName=master)](https://moonstorm.visualstudio.com/OpenZWave-DotNet-Standard/_build/latest?definitionId=6&branchName=master)
-- ~~Setting up the development environment, including the CI system.~~
-- Attaching the required dependencies (**IN PROGRESS**).
-- Work towards the first release.
+- ~~Set up the development environment, including the CI system.~~
+- ~~Attach the required dependencies.~~
+- Work towards the first release (**IN PROGRESS**).
