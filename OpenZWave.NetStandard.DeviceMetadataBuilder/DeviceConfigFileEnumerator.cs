@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using OpenZWave.NetStandard.Validations;
@@ -28,13 +29,28 @@ namespace OpenZWave.NetStandard.DeviceMetadataBuilder
         /// </summary>
         public IEnumerable<DeviceConfigurationFile> GetConfigurationFiles()
         {
-            return Directory.EnumerateFiles(_configuration.ConfigurationFolderPath, "*.xml", SearchOption.AllDirectories).Select(
-                fullConfigFilePath =>
+            return Directory.EnumerateDirectories(_configuration.ConfigurationFolderPath, "*.*",
+                    SearchOption.TopDirectoryOnly)
+                .OrderBy(path => path)
+                .Select(manufacturerPath =>
                 {
-                    var deviceId = Path.GetFileNameWithoutExtension(fullConfigFilePath);
-                    var manufacturerName = Path.GetFileName(Path.GetDirectoryName(fullConfigFilePath));
-                    return new DeviceConfigurationFile(manufacturerName, deviceId, fullConfigFilePath);
-                }).Take(_configuration.MaximumConfigurationFiles??int.MaxValue);
+                    var manufacturerName = Path.GetFileName(manufacturerPath);
+                    return new
+                    {
+                        ManufacturerName = manufacturerName,
+                        ManufacturerDeviceConfigFilePaths =
+                            Directory.EnumerateFiles(manufacturerPath, "*.xml", SearchOption.AllDirectories)
+                    };
+                })
+                .SelectMany(manufacturerInfo =>
+                {
+                    return manufacturerInfo.ManufacturerDeviceConfigFilePaths.Select(manufacturerDeviceConfigFilePath =>
+                    {
+                        var deviceId = Path.GetFileNameWithoutExtension(manufacturerDeviceConfigFilePath);
+                        return new DeviceConfigurationFile(manufacturerInfo.ManufacturerName, deviceId,
+                            manufacturerDeviceConfigFilePath);
+                    });
+                }).Take(_configuration.MaximumConfigurationFiles ?? int.MaxValue);
         }
     }
 }
